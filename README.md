@@ -9,6 +9,7 @@ You will submit your work via GitHub Classroom, adhering to version control best
 Requirements &amp; Build Instructions:
 Use the provided Figma design as the visual reference for content, layout, and styling.
 On small screens, the menu links should be hidden by default and revealed by tapping the menu button. Avoid pushing the content down when the menu opens.
+
 On larger screens, the menu should be visible by default in a horizontal layout without the toggle button. There will be two breakpoints: first, to position the menu below the logo, and second, to position it between the logo and the shopping cart once there is enough space.
 A third breakpoint will introduce a fixed-width container that keeps the content centered on the page at a maximum width of 1820px.
 

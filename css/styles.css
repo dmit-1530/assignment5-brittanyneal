@@ -1,169 +1,22 @@
-/* Colour Palette
-    off-black : #002438;
-    navy      : #003049;
-    orange    : #F77F00;
-    yellow    : #FCBF49;
-*/
-
 body {
-    background: linear-gradient(90deg, #46A098 0%, #54A654 100%);
+    background: linear-gradient(900deg, #46A098 0%, #54A654 100%);
+    font-family: "PT Sans", sans-serif;
 }
-
-/* Helper Classes */
 
 .flex-container {
     display: flex;
     justify-content: space-between;
 }
 
-/* *************** header & nav ****************** */
-/* Step: 1 Style the default/showing state. Starting with the mobile view, style the layout and links for how they will look when visible */
-
 header {
-    background-color: #003049;
-    color: #FCBF49;
-    /* Not going to change color because needs to be added to "a" */
-    padding: 1rem;
+    background-color: #9846A0;
+    padding: 1.25rem 1rem;
+    /* might be too much padding????? */
 }
 
 header a {
-    color: #FCBF49;
+    color: #FFF;
     text-decoration: none;
-    /* allows the clickable area to take up the full width and height of the li */
     display: block;
-}
-
-h1 a:hover {
-    color: #F77F00;
-}
-
-.menu a:hover,
-.menu a:active {
-    background-color: #002438;
-}
-
-.toggle-btn {
-    background: #003049;
-    border: none;
-    outline: none;
-}
-
-.toggle-btn:hover {
-    cursor: pointer;
-}
-
-.toggle-btn svg rect {
-    fill: #FCBF49;
-}
-
-.toggle-btn:hover svg rect {
-    fill: #F77F00;
-}
-
-.menu li {
-    /* the extra space from the additional line height, makes this a larger area and vertically centers the text */
-    line-height: 2.5rem;
-    text-align: center;
-}
-
-header nav {
-    /* style this for how it will look overlapped the main content */
-    /* this element does not have a parent container that is positioned relative, therefore it's positioned in relationship to the browser screen */
-    position: absolute;
-    top: 4.125rem;
-    left: 0;
-    width: 100vw;
-    background-color: #003049;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.7s ease-in-out;
-}
-
-.show-nav {
-    max-height: 100vh;
-}
-
-/* ************************* section ****************** */
-
-section {
-    padding: 3.125rem;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-section p {
-    color: #002438;
-    border-bottom: 2px solid #F77F00;
-    padding-bottom: .625rem;
-    margin-bottom: .625rem;
-    font-size: 1.777rem;
-}
-
-section h2 {
-    color: #002438;
-    font-size: 3.157rem;
-    margin-bottom: 2rem;
-}
-
-.gallery {
-    display: flex;
-    flex-flow: wrap;
-    justify-content: center;
-}
-
-.thumbnail {
-    margin: 0 0.5rem;
-    position: relative;
-}
-
-span {
-    background-color: #FCBF49;
-    color: #fff;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    user-select: none;
-    border-radius: .3125rem;
-    /* position this span over the image */
-    position: absolute;
-    /* The top, right, bottom, left values position in relation to the screen UNLESS the parent container is a relative positioned element */
-    top: -1.25rem;
-    right: -0.625rem;
-}
-
-/* Step 4: add a media query and show the nav by default (hide the toggle button) and style it as a horizontal nav */
-
-/* Media Query */
-@media (min-width: 37.5rem) {
-    .inner-container {
-        max-width: 64rem;
-        margin: 0 auto;
-        padding: 1rem;
-    }
-
-    .toggle-btn {
-        display: none;
-    }
-
-    header nav {
-        position: static;
-        /* Return nav to html from position absolute */
-        width: auto;
-        max-height: unset;
-        overflow: visible;
-    }
-
-    .menu,
-    header .inner-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1.5rem;
-    }
-
-    .menu a:hover,
-    .menu a:active {
-        background-color: unset;
-        color: #F77F00;
-    }
 }
 
