@@ -8,6 +8,11 @@ body {
     padding: 1rem;
 }
 
+main .inner-container {
+    max-width: 30.5rem;
+    margin: 0;
+}
+
 .flex-container {
     display: flex;
     justify-content: space-between;
@@ -25,8 +30,6 @@ header a {
     display: block;
 }
 
-        /* do we need to add hover states? */
-
 .toggle-btn {
     background: #9846A0;
     border: none;
@@ -36,9 +39,8 @@ header a {
 
 .toggle-btn:hover {
     cursor: pointer;
+    background-color: #A258A9;
 }
-
-        /* toggle button features??? hover and fill ?*/
 
 .menu {
     margin: 0 auto;
@@ -54,6 +56,12 @@ header a {
     font-weight: 400;
     text-transform: uppercase;
     border-bottom: #CECBCB 1px solid;
+}
+
+.menu li:hover,
+.menu li:focus {
+    background-color: #A258A9;
+    padding: 0 0.5rem 0 0.5rem;
 }
 
 .menu li:first-child {
@@ -138,8 +146,14 @@ p {
     padding: 0.75rem 1.5rem;
 }
 
+.cta-btn:hover,
+.cta-btn:focus {
+    background-color: #A258A9;
+}
+
 /* media queriesssss */
 
+/* medium */
 @media (min-width: 780px) {
     .toggle-btn {
         display: none;
@@ -151,6 +165,12 @@ p {
         width: auto;
         overflow: visible;
         padding-bottom: 0;
+        width: 100%;
+        order: 3;
+    }
+
+    header {
+        height: auto;
     }
 
     .menu {
@@ -158,14 +178,67 @@ p {
         width: auto;
         padding: 0;
         gap: 2rem;
+        justify-content: space-between;
     }
 
     .menu li {
         border-bottom: none;
+        gap: 4rem;
     }
 
     .menu li:first-child {
         border-top: none;
     }
 
+    main {
+        padding-top: 2.5rem 3rem;
+    }
+
+    .flex-container {
+        flex-wrap: wrap;
+    }
+
+    main section.inner-container {
+        max-width: 35rem;
+        padding: 2.25rem 2rem;
+        margin: 0;
+    }
+
+}
+
+/* wide */
+@media (min-width: 1037px) {
+       
+    .flex-container {
+        flex-wrap: nowrap;
+        align-items: center;
+        position: relative;
+    }
+
+    nav {
+        justify-content: space-between;
+    }
+
+    .menu {
+        justify-content: center;
+        gap: 4rem;
+    }
+
+    .bag-icon {
+        align-self: flex-end;
+        /* wtf????????????????; */
+    }
+       
+
+
+}
+
+/* final size */
+@media (min-width: 1920px) {
+    .inner-container {
+        max-width: 1820px;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0 auto;
+    }
 }
