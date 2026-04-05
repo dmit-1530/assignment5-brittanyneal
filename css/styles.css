@@ -224,12 +224,7 @@ p {
         gap: 4rem;
     }
 
-    .bag-icon {
-        align-self: flex-end;
-        /* wtf????????????????; */
-    }
-       
-
+    /* I have tried over and over to get the shopping bag icon back to the right side of the screen, but I'm officially stumped. Nothing is working for me, so it lives there now lol */
 
 }
 
